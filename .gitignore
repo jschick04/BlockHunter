@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+# Build files
+[Bb]in/
+[Bb]in-[Ii]nt/
+[Ll]ogs/
+
+# Visual Studio files
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+
+*.ini
