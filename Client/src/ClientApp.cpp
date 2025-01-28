@@ -1,13 +1,7 @@
 #include "Walnut/Application.h"
 #include "Walnut/EntryPoint.h"
 
-#include "Walnut/UI/UI.h"
-
-class ExampleLayer final : public Walnut::Layer
-{
-public:
-	void OnUIRender() override { }
-};
+#include "ClientLayer.h"
 
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
@@ -18,8 +12,7 @@ Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 
 	Application* app = new Application(spec);
 
-	const std::shared_ptr<ExampleLayer> exampleLayer = std::make_shared<ExampleLayer>();
-	app->PushLayer(exampleLayer);
+	app->PushLayer<BlockHunter::ClientLayer>();
 	
 	return app;
 }
